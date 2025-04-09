@@ -1,0 +1,35 @@
+select collegeproject;
+drop table LoginData;
+select *from LoginData;
+
+create  table LoginData(Record int primary key auto_increment, Type varchar(10), Name varchar(20), Username varchar(15), Mobile_Number varchar(10), Email varchar(20), Gender varchar(10), Password varchar(20));
+
+insert into LoginData(Type, Name, Username, Mobile_Number, Email, Gender, Password) values('User', 'Mohan Kumar', 'mohan123', '1234567890', 'mohan@gmail.com', 'Male', 'Password'); 
+
+insert into LoginData(Type, Name, Username, Mobile_Number, Email, Gender, Password) values('Admin', 'Aditya Kumar',  'aditya123', '0123456789', 'aditya@gmail.com', 'Male', 'Aditya123'); 
+ 
+ drop table consumerdata;
+create table ConsumerData(
+	record INT AUTO_INCREMENT PRIMARY KEY,
+	ConnectionType VARCHAR(20),
+    Distric VARCHAR(10),
+    CANumber VARCHAR(10),
+    TotalBill NUMERIC(5),
+    Name VARCHAR(20),
+    FatherName VARCHAR(20),
+    Gender VARCHAR(15),
+    Pincode VARCHAR(6),
+    Mobile VARCHAR(10),
+    Email VARCHAR(30),
+    Village VARCHAR(15),
+    Panchayat VARCHAR(20),
+    Block VARCHAR(15),
+    SubDivision VARCHAR(15),
+    Aadhaar VARCHAR(12),
+    DOB VARCHAR(10)
+);
+insert into ConsumerData(ConnectionType, Distric, CANumber, TotalBill, Name, FatherName, Gender, Pincode,
+    Mobile, Email, Village, Panchayat, Block, SubDivision, Aadhaar, DOB) value('Domestic', 'Patna', '2005012345',
+    '268', 'Munna Kumar','Munna Lal Prasad', 'Male', '801104', '0123456789', 'munakumar@gmail.com', 'Dariyapur', '
+    Jamalpura', 'Bikram', 'Paliganj', '012345678901', '01/06/1992');
+select * from ConsumerData;
